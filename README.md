@@ -18,28 +18,6 @@ Automatically generates professional PNG success reports for multiple companies 
 
 ---
 
-## Project Structure
-
-```
-Success Report Generator/
-
-├── assets/
-│   └── cleartax-logo.png
-│
-├── data/
-│   └── Success_Report_Data.csv
-│
-├── output/
-│   └── (Generated PNG reports)
-│
-├── index.html
-├── style.css
-├── script.js
-├── generate.js
-├── Generate Reports.bat
-├── package.json
-└── README.md
-```
 
 ---
 
@@ -54,12 +32,6 @@ https://nodejs.org/
 ---
 
 ## 2. Download this project
-
-Either:
-
-- Clone the GitHub repository
-
-OR
 
 - Download the ZIP and extract it.
 
@@ -124,12 +96,12 @@ All generated PNG reports will be available there.
 
 ---
 
-# Notes
-
+# Important Notes by Arav
+ - <b> Developed for ClearTax Internal Reporting by Arav Fernandez. </b>
+ ---
 - Do not modify the HTML, CSS or JavaScript files unless making template changes.
 - Only update the CSV file before generating reports.
 - Generated PNGs are overwritten each time the generator is run.
 
----
 
-Developed for ClearTax Internal Reporting.
+
