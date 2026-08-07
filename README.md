@@ -98,7 +98,6 @@ All generated PNG reports will be available there.
 
 # Important Notes by Arav
  - <b> Developed for ClearTax Internal Reporting by Arav Fernandez. </b>
- ---
 - Do not modify the HTML, CSS or JavaScript files unless making template changes.
 - Only update the CSV file before generating reports.
 - Generated PNGs are overwritten each time the generator is run.
