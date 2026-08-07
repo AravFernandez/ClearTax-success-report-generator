@@ -1,0 +1,627 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#EDF2F7;
+    font-family:'Inter',sans-serif;
+}
+
+.x-labels{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:170px;
+
+    margin-top:18px;
+
+}
+
+.x-item{
+
+    width:130px;
+
+    text-align:center;
+
+}
+
+
+.kpi-number{
+
+    font-size:60px;
+
+    font-weight:800;
+
+    line-height:1;
+
+    letter-spacing:-1px;
+
+    color:#111827;
+
+}
+
+.impact .kpi-number{
+    color:#2563EB;
+}
+
+.traffic-box .kpi-number{
+    color:#D4A800;   /* or change to blue later */
+}
+
+.kpi-title{
+
+    margin-top:18px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+.kpi-subtitle{
+
+    margin-top:6px;
+
+    font-size:14px;
+
+    color:#64748B;
+
+    line-height:1.4;
+
+}
+
+
+
+/* ===========================
+   REPORT
+=========================== */
+
+.report{
+
+    width:1400px;
+    height:1200px;
+
+    margin:40px auto;
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:55px;
+
+}
+
+main{
+
+    display:grid;
+
+    grid-template-columns:940px 320px;
+
+    justify-content:space-between;
+
+    gap:40px;
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+}
+
+.header-left{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+}
+
+.header-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    gap:14px;
+
+}
+
+.logo{
+
+    width:170px;
+
+    height:auto;
+
+    display:block;
+
+}
+
+.fy{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+.brand{
+
+    color:#2563EB;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    font-weight:700;
+
+}
+
+.company{
+    margin-top:10px;
+    font-size:38px;
+}
+
+h1{
+    margin-top:2px;
+    font-size:30px;
+}
+
+.subtitle{
+    margin-top:6px;
+    font-size:18px;
+}
+
+
+
+.divider{
+
+    border:none;
+
+    border-top:1px solid #E5E7EB;
+
+    margin:20px 0 24px;
+
+}
+
+
+/* ===========================
+   CHART
+=========================== */
+
+.chart-card{
+
+    background:#FAFBFC;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.chart-title h3{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+.chart-title p{
+
+    margin-top:4px;
+
+    font-size:15px;
+
+    color:#64748B;
+
+}
+/* ---------- Traffic ---------- */
+
+.traffic-info{
+
+    text-align:right;
+
+}
+
+
+.traffic-box{
+
+    background:linear-gradient(
+        180deg,
+        #fffde8,
+        #f7f2dd
+    );
+
+    border:1px solid #ffea4b;
+
+    border-radius:18px;
+
+    padding:28px;
+
+}
+
+.traffic-label{
+
+    margin-top:18px;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+.traffic-number{
+
+    font-size:58px;
+
+    font-weight:800;
+
+    color:#e6b400;
+
+    line-height:1;
+
+}
+
+.traffic-value{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    color:#ebcd25;
+
+    letter-spacing:-0.5px;
+
+}
+
+
+.chart-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:-40px;
+
+}
+
+.chart-header p{
+
+    margin-top:2px;
+
+    color:#64748B;
+
+    font-size:15px;
+
+}
+
+.graph{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    gap:170px;
+
+    position:relative;
+
+    padding-bottom:0;
+
+}
+
+.graph-line{
+
+    position:absolute;
+
+    left:40px;
+
+    right:40px;
+
+    bottom:0;
+
+    height:2px;
+
+    background:#E5E7EB;
+
+}
+
+.bar-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    z-index:2;
+
+}
+
+.number{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    letter-spacing:-0.5px;
+
+    color:#111827;
+
+    margin-bottom:18px;
+
+}
+
+.bar{
+
+    width:130px;
+
+    border-radius:22px 22px 0 0;
+
+}
+
+.previous{
+
+    height:300px;
+
+    background:#CBD5E1;
+
+}
+
+.current{
+
+    height:410px;
+
+    background:linear-gradient(
+        180deg,
+        #9ec9ff 0%,
+        #5793f4 30%,
+        #2F6FE8 65%,
+        #0a36ad 100%
+    );
+
+    box-shadow:
+        inset 0 2px 0 rgba(255,255,255,.35),
+        0 12px 25px rgba(37,99,235,.18);
+
+}
+
+.label{
+
+    margin-top:22px;
+
+    text-align:center;
+
+}
+
+.year-title{
+
+    font-size:19px;
+
+    font-weight:700;
+
+    color:#475569;
+
+}
+
+.year-subtitle{
+
+    margin-top:4px;
+
+    font-size:17px;
+
+    color:#94A3B8;
+
+    font-weight:600;
+
+}
+
+.growth-pill{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+    padding:10px 22px;
+
+    border-radius:999px;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
+}
+
+/* ===========================
+   RIGHT PANEL
+=========================== */
+
+.metrics{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+.card{
+
+    background:#fff;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    box-shadow:0 6px 20px rgba(15,23,42,.05);
+
+}
+
+.card span{
+
+    color:#64748B;
+
+    font-size:15px;
+
+}
+
+.card h2{
+
+    margin-top:12px;
+
+    font-size:42px;
+
+    color:#111827;
+
+}
+
+
+/* ======================
+   IMPACT CARD
+====================== */
+
+.impact{
+
+    background:linear-gradient(180deg,#EFF6FF,#DBEAFE);
+
+    border:1px solid #BFDBFE;
+
+}
+
+
+.impact-number.dark{
+
+    color:#111827;
+
+    font-size:52px;
+
+}
+
+
+
+.coupon-title{
+
+    color:#64748B;
+
+    font-size:21px;
+
+    margin-bottom:18px;
+
+    font-weight:600;
+
+}
+
+.coupon-box{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    width:100%;
+
+    background:#EFF6FF;
+
+    color:#2563EB;
+
+    border:2px dashed #3B82F6;
+
+    border-radius:14px;
+
+    padding:18px 22px;
+
+    font-size:30px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    margin-top:40px;
+
+}
+
+.summary{
+
+    background:#F8FAFC;
+
+    border-left:5px solid #2563EB;
+
+    border-radius:16px;
+
+    padding:24px 30px;
+
+}
+
+.summary-title{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+.summary p{
+
+    margin-top:10px;
+
+    font-size:19px;
+
+    line-height:1.7;
+
+    color:#475569;
+
+}

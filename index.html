@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>ClearTax Success Report</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="report">
+
+<header>
+
+    <div class="header-left">
+
+        <div class="company" id="company">
+            Company Name
+        </div>
+        <h1 id="report-title">
+            Success Report
+        </h1>
+
+        <div class="subtitle">
+            Employee Income Tax Filing Performance
+        </div>
+
+    </div>
+
+    <div class="header-right">
+
+        <img src="assets/cleartax-logo.png"
+             alt="ClearTax"
+             class="logo">
+
+        <div class="fy" id="fy">
+            FY 2025–26
+        </div>
+
+    </div>
+
+</header>
+
+<hr class="divider">
+
+<main>
+
+<section class="chart-card">
+
+    <div class="chart-header">
+
+        <div class="chart-title">
+
+            <h3>ITR Filing</h3>
+
+            <p>FY 2024–25 vs FY 2025–26</p>
+
+        </div>
+
+    </div>
+
+    <div class="graph">
+
+        <div class="graph-line"></div>
+
+        <div class="bar-group">
+
+            <div class="number" id="previous-filing">
+                0
+            </div>
+
+            <div class="bar previous" id="previous-bar"></div>
+
+        </div>
+
+        <div class="growth-pill" id="growth-pill">
+            ▲ 0%
+        </div>
+
+        <div class="bar-group">
+
+            <div class="number" id="current-filing">
+                0
+            </div>
+
+            <div class="bar current" id="current-bar"></div>
+
+        </div>
+
+    </div>
+
+<div class="x-labels">
+
+    <div class="x-item">
+
+            <div class="year-title">
+                Previous Year
+            </div>
+
+            <div class="year-subtitle">
+                FY 2024–25
+            </div>
+
+        </div>
+
+        <div class="x-item">
+
+            <div class="year-title">
+                Current Year
+            </div>
+
+            <div class="year-subtitle">
+                FY 2025–26
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+<section class="metrics">
+
+    <div class="card">
+
+        <div class="coupon-title">
+
+            Campaign Coupon
+
+        </div>
+
+        <div class="coupon-box" id="coupon">
+            COUPON
+        </div>
+
+    </div> 
+
+    <div class="traffic-box">
+
+        <div class="traffic-number" id="traffic">
+            0
+        </div>
+
+        <div class="traffic-label">
+            Employee Traffic
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="kpi-number" id="total-filings">
+            0
+        </div>
+
+        <div class="kpi-title">
+            Total Filings
+        </div>
+
+    </div>
+
+    <div class="card impact">
+
+        <div class="kpi-number" id="additional-filings">
+            +0
+        </div>
+
+        <div class="kpi-title">
+            Additional ITRs filed
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+
+<div class="summary">
+
+<div class="summary-title">
+
+Performance Summary
+
+</div>
+
+<p id="summary-text">
+
+Summary
+
+</p>
+
+</div>
+
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
