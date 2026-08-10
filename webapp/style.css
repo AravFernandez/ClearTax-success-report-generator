@@ -1,0 +1,1075 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#EDF2F7;
+
+    font-family:'Inter',sans-serif;
+
+    color:#111827;
+
+}
+
+
+/* =========================================================
+   APP LAYOUT
+========================================================= */
+
+.app{
+
+    min-height:100vh;
+
+    display:grid;
+
+    grid-template-columns:360px 1fr;
+
+    gap:30px;
+
+    padding:30px;
+
+}
+
+
+/* =========================================================
+   LEFT CONTROL PANEL
+========================================================= */
+
+.control-panel{
+
+    background:#FFFFFF;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    height:fit-content;
+
+    position:sticky;
+
+    top:30px;
+
+    box-shadow:
+        0 8px 30px rgba(15,23,42,.06);
+
+}
+
+
+.control-brand{
+
+    color:#2563EB;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+
+}
+
+
+.control-header h1{
+
+    font-size:26px;
+
+    line-height:1.2;
+
+    font-weight:800;
+
+    color:#111827;
+
+}
+
+
+.control-header p{
+
+    margin-top:9px;
+
+    color:#64748B;
+
+    font-size:14px;
+
+    line-height:1.5;
+
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form{
+
+    margin-top:28px;
+
+}
+
+
+.field{
+
+    margin-top:18px;
+
+}
+
+
+.field:first-child{
+
+    margin-top:0;
+
+}
+
+
+.field-row{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+}
+
+
+.field label{
+
+    display:block;
+
+    margin-bottom:7px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    color:#334155;
+
+}
+
+
+.field input{
+
+    width:100%;
+
+    height:44px;
+
+    padding:0 13px;
+
+    border:1px solid #CBD5E1;
+
+    border-radius:10px;
+
+    background:#FFFFFF;
+
+    color:#111827;
+
+    font-family:'Inter',sans-serif;
+
+    font-size:14px;
+
+    outline:none;
+
+    transition:.2s ease;
+
+}
+
+
+.field input::placeholder{
+
+    color:#94A3B8;
+
+}
+
+
+.field input:focus{
+
+    border-color:#2563EB;
+
+    box-shadow:
+        0 0 0 3px rgba(37,99,235,.10);
+
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.actions{
+
+    margin-top:25px;
+
+}
+
+
+.primary-btn{
+
+    width:100%;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:11px;
+
+    background:#2563EB;
+
+    color:#FFFFFF;
+
+    font-family:'Inter',sans-serif;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+    box-shadow:
+        0 6px 15px rgba(37,99,235,.20);
+
+}
+
+
+.primary-btn:hover{
+
+    background:#1D4ED8;
+
+    transform:translateY(-1px);
+
+}
+
+
+.primary-btn:active{
+
+    transform:translateY(0);
+
+}
+
+
+.primary-btn:disabled{
+
+    opacity:.65;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+}
+
+
+.secondary-btn{
+
+    width:100%;
+
+    height:44px;
+
+    margin-top:10px;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:11px;
+
+    background:#F8FAFC;
+
+    color:#475569;
+
+    font-family:'Inter',sans-serif;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s ease;
+
+}
+
+
+.secondary-btn:hover{
+
+    background:#F1F5F9;
+
+}
+
+
+.status{
+
+    min-height:20px;
+
+    margin-top:12px;
+
+    text-align:center;
+
+    color:#64748B;
+
+    font-size:12px;
+
+}
+
+
+/* =========================================================
+   PREVIEW PANEL
+========================================================= */
+
+.preview-panel{
+
+    min-width:0;
+
+}
+
+
+.preview-header{
+
+    margin-bottom:15px;
+
+}
+
+
+.preview-header h2{
+
+    font-size:20px;
+
+    font-weight:800;
+
+    color:#111827;
+
+}
+
+
+.preview-header p{
+
+    margin-top:4px;
+
+    color:#64748B;
+
+    font-size:13px;
+
+}
+
+
+/* =========================================================
+   REPORT WRAPPER
+========================================================= */
+
+.report-wrapper{
+
+    width:100%;
+
+    overflow:auto;
+
+    padding:20px;
+
+    background:#E2E8F0;
+
+    border-radius:20px;
+
+}
+
+
+/* =========================================================
+   REPORT
+========================================================= */
+
+.report{
+
+    width:1400px;
+
+    height:1200px;
+
+    margin:0 auto;
+
+    background:#FFFFFF;
+
+    border-radius:24px;
+
+    padding:55px;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/* =========================================================
+   REPORT HEADER
+========================================================= */
+
+.report header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+}
+
+
+.header-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+}
+
+
+.company{
+
+    margin-top:10px;
+
+    font-size:38px;
+
+    font-weight:800;
+
+    color:#111827;
+
+    letter-spacing:-.6px;
+
+}
+
+
+.report h1{
+
+    margin-top:2px;
+
+    font-size:30px;
+
+    font-weight:600;
+
+    color:#64748B;
+
+}
+
+
+.subtitle{
+
+    margin-top:6px;
+
+    font-size:18px;
+
+    color:#64748B;
+
+}
+
+
+.header-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    gap:14px;
+
+}
+
+
+.logo{
+
+    width:170px;
+
+    height:auto;
+
+    display:block;
+
+}
+
+
+.fy{
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.divider{
+
+    border:none;
+
+    border-top:1px solid #E5E7EB;
+
+    margin:20px 0 24px;
+
+}
+
+
+/* =========================================================
+   REPORT MAIN
+========================================================= */
+
+.report main{
+
+    display:grid;
+
+    grid-template-columns:940px 320px;
+
+    justify-content:space-between;
+
+    gap:40px;
+
+    flex:1;
+
+    min-height:0;
+
+}
+
+
+/* =========================================================
+   CHART CARD
+========================================================= */
+
+.chart-card{
+
+    background:#FAFBFC;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    min-height:0;
+
+}
+
+
+.chart-title h3{
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+
+.chart-title p{
+
+    margin-top:4px;
+
+    font-size:15px;
+
+    color:#64748B;
+
+}
+
+
+.chart-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+}
+
+
+/* =========================================================
+   GRAPH
+========================================================= */
+
+.graph{
+
+    flex:1;
+
+    min-height:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    gap:170px;
+
+    position:relative;
+
+    padding-bottom:0;
+
+}
+
+
+.graph-line{
+
+    position:absolute;
+
+    left:40px;
+
+    right:40px;
+
+    bottom:0;
+
+    height:2px;
+
+    background:#E5E7EB;
+
+}
+
+
+.bar-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:flex-end;
+
+    z-index:2;
+
+    height:100%;
+
+}
+
+
+.number{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    letter-spacing:-.5px;
+
+    color:#111827;
+
+    margin-bottom:18px;
+
+}
+
+
+.bar{
+
+    width:130px;
+
+    border-radius:22px 22px 0 0;
+
+    flex-shrink:0;
+
+}
+
+
+.previous{
+
+    height:300px;
+
+    background:#CBD5E1;
+
+}
+
+.current{
+
+    height:410px;
+
+    background:linear-gradient(
+        180deg,
+        #9EC9FF 0%,
+        #5793F4 35%,
+        #2F6FE8 65%,
+        #0A36AD 100%
+    );
+
+    box-shadow:
+        0 10px 24px rgba(37,99,235,.16);
+
+}
+
+
+/* =========================================================
+   GROWTH PILL
+========================================================= */
+
+.growth-pill{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#DCFCE7;
+
+    color:#15803D;
+
+    padding:10px 22px;
+
+    border-radius:999px;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+    box-shadow:
+
+        0 8px 18px rgba(0,0,0,.08);
+
+}
+
+
+/* =========================================================
+   X AXIS LABELS
+========================================================= */
+
+.x-labels{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:170px;
+
+    margin-top:18px;
+
+}
+
+
+.x-item{
+
+    width:130px;
+
+    text-align:center;
+
+}
+
+
+.year-title{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#475569;
+
+}
+
+
+.year-subtitle{
+
+    margin-top:5px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#94A3B8;
+
+}
+
+
+/* =========================================================
+   KPI PANEL
+========================================================= */
+
+.metrics{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+}
+
+
+.card{
+
+    background:#FFFFFF;
+
+    border:1px solid #E5E7EB;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    box-shadow:
+
+        0 6px 20px rgba(15,23,42,.05);
+
+}
+
+
+/* =========================================================
+   KPI NUMBERS
+========================================================= */
+
+.kpi-number{
+
+    font-size:60px;
+
+    font-weight:800;
+
+    line-height:1;
+
+    letter-spacing:-1px;
+
+    color:#111827;
+
+}
+
+
+.kpi-title{
+
+    margin-top:18px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+
+.kpi-subtitle{
+
+    margin-top:6px;
+
+    font-size:14px;
+
+    color:#64748B;
+
+    line-height:1.4;
+
+}
+
+
+/* =========================================================
+   TRAFFIC CARD
+========================================================= */
+
+.traffic-box{
+
+    background:linear-gradient(
+        180deg,
+        #FAFBE2,
+        #F7F2DD
+    );
+
+    border:1px solid #FFEA4B;
+
+}
+
+
+.traffic-number{
+
+    color:#D4A800;
+
+}
+
+
+/* =========================================================
+   IMPACT CARD
+========================================================= */
+
+.impact{
+
+    background:linear-gradient(
+        180deg,
+        #EFF6FF,
+        #DBEAFE
+    );
+
+    border:1px solid #BFDBFE;
+
+}
+
+
+.impact .kpi-number{
+
+    color:#2563EB;
+
+}
+
+
+/* =========================================================
+   COUPON
+========================================================= */
+
+.coupon-title{
+
+    color:#64748B;
+
+    font-size:21px;
+
+    margin-bottom:18px;
+
+    font-weight:600;
+
+}
+
+
+.coupon-box{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:100%;
+
+    min-height:64px;
+
+    padding:12px 16px;
+
+    background:#EFF6FF;
+
+    color:#2563EB;
+
+    border:2px dashed #3B82F6;
+
+    border-radius:14px;
+
+    font-size:30px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    text-align:center;
+
+    word-break:break-word;
+
+}
+
+
+/* =========================================================
+   FOOTER / SUMMARY
+========================================================= */
+
+.report footer{
+
+    margin-top:40px;
+
+}
+
+
+.summary{
+
+    background:#F8FAFC;
+
+    border-left:5px solid #2563EB;
+
+    border-radius:16px;
+
+    padding:24px 30px;
+
+}
+
+
+.summary-title{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#111827;
+
+}
+
+
+.summary p{
+
+    margin-top:10px;
+
+    font-size:19px;
+
+    line-height:1.7;
+
+    color:#475569;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE APP UI
+========================================================= */
+
+@media(max-width:1200px){
+
+    .app{
+
+        grid-template-columns:320px 1fr;
+
+        gap:20px;
+
+        padding:20px;
+
+    }
+
+}
+
+
+@media(max-width:900px){
+
+    .app{
+
+        display:block;
+
+        padding:15px;
+
+    }
+
+
+    .control-panel{
+
+        position:relative;
+
+        top:auto;
+
+        margin-bottom:20px;
+
+    }
+
+
+    .preview-panel{
+
+        width:100%;
+
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .field-row{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

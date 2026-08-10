@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ClearTax Success Report Generator</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =========================================
+         LEFT PANEL — INPUTS
+    ========================================== -->
+
+    <section class="control-panel">
+
+        <div class="control-header">
+
+            <div class="control-brand">
+                CLEARTAX
+            </div>
+
+            <h1>
+                Success Report Generator
+            </h1>
+
+            <p>
+                Enter the company details below to generate
+                a success report.
+            </p>
+
+        </div>
+
+
+        <div class="form">
+
+            <!-- Company -->
+
+            <div class="field">
+
+                <label for="companyInput">
+                    Company Name
+                </label>
+
+                <input
+                    type="text"
+                    id="companyInput"
+                    placeholder="e.g. Hexaware Technologies"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- Filing Data -->
+
+            <div class="field-row">
+
+                <div class="field">
+
+                    <label for="previousInput">
+                        Previous Year Filings
+                    </label>
+
+                    <input
+                        type="number"
+                        id="previousInput"
+                        placeholder="1903"
+                        min="0"
+                    >
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="currentInput">
+                        Current Year Filings
+                    </label>
+
+                    <input
+                        type="number"
+                        id="currentInput"
+                        placeholder="2527"
+                        min="0"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Traffic -->
+
+            <div class="field">
+
+                <label for="trafficInput">
+                    Employee Traffic
+                </label>
+
+                <input
+                    type="number"
+                    id="trafficInput"
+                    placeholder="6270"
+                    min="0"
+                >
+
+            </div>
+
+
+            <!-- Coupon -->
+
+            <div class="field">
+
+                <label for="couponInput">
+                    Campaign Coupon
+                </label>
+
+                <input
+                    type="text"
+                    id="couponInput"
+                    placeholder="CTHEXAWAREX"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+                        <!-- Actions -->
+            <div class="actions">
+
+                <button
+                    type="button"
+                    id="resetBtn"
+                    class="secondary-btn"
+                >
+                    Reset
+                </button>
+
+            </div>
+
+
+            <div
+                id="status"
+                class="status"
+                aria-live="polite"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         RIGHT PANEL — LIVE PREVIEW
+    ========================================== -->
+
+    <section class="preview-panel">
+
+        <div class="preview-header">
+
+            <div>
+
+                <h2>
+                    Report Preview
+                </h2>
+
+                <p>
+                    Your report updates automatically as you enter data.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================
+             ACTUAL REPORT
+        ====================================== -->
+
+        <div class="report-wrapper">
+
+            <div
+                class="report"
+                id="report"
+            >
+
+                <!-- HEADER -->
+
+                <header>
+
+                    <div class="header-left">
+
+                        <div
+                            class="company"
+                            id="rCompany"
+                        >
+                            Company Name
+                        </div>
+
+                        <h1>
+                            Success Report
+                        </h1>
+
+                        <div class="subtitle">
+                            Employee Income Tax Filing Performance
+                        </div>
+
+                    </div>
+
+
+                    <div class="header-right">
+
+                        <img
+                            src="assets/cleartax-logo.png"
+                            alt="ClearTax"
+                            class="logo"
+                        >
+
+                        <div class="fy">
+                            FY 2025–26
+                        </div>
+
+                    </div>
+
+                </header>
+
+
+                <hr class="divider">
+
+
+                <!-- MAIN CONTENT -->
+
+                <main>
+
+
+                    <!-- =================================
+                         CHART
+                    ================================== -->
+
+                    <section class="chart-card">
+
+                        <div class="chart-header">
+
+                            <div class="chart-title">
+
+                                <h3>
+                                    ITR Filing
+                                </h3>
+
+                                <p>
+                                    FY 2024–25 vs FY 2025–26
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="graph">
+
+                            <div class="graph-line"></div>
+
+
+                            <!-- Previous Year -->
+
+                            <div class="bar-group">
+
+                                <div
+                                    class="number"
+                                    id="rPrevious"
+                                >
+                                    0
+                                </div>
+
+                                <div
+                                    class="bar previous"
+                                    id="previousBar"
+                                ></div>
+
+                            </div>
+
+
+                            <!-- Growth -->
+
+                            <div
+                                class="growth-pill"
+                                id="rGrowth"
+                            >
+                                ▲ 0%
+                            </div>
+
+
+                            <!-- Current Year -->
+
+                            <div class="bar-group">
+
+                                <div
+                                    class="number"
+                                    id="rCurrent"
+                                >
+                                    0
+                                </div>
+
+                                <div
+                                    class="bar current"
+                                    id="currentBar"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- X Axis Labels -->
+
+                        <div class="x-labels">
+
+                            <div class="x-item">
+
+                                <div class="year-title">
+                                    Previous Year
+                                </div>
+
+                                <div class="year-subtitle">
+                                    FY 2024–25
+                                </div>
+
+                            </div>
+
+
+                            <div class="x-item">
+
+                                <div class="year-title">
+                                    Current Year
+                                </div>
+
+                                <div class="year-subtitle">
+                                    FY 2025–26
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- =================================
+                         KPI CARDS
+                    ================================== -->
+
+                    <section class="metrics">
+
+
+                        <!-- Coupon -->
+
+                        <div class="card">
+
+                            <div class="coupon-title">
+                                Campaign Coupon
+                            </div>
+
+                            <div
+                                class="coupon-box"
+                                id="rCoupon"
+                            >
+                                COUPON
+                            </div>
+
+                        </div>
+
+
+                        <!-- Traffic -->
+
+                        <div class="card traffic-box">
+
+                            <div
+                                class="kpi-number traffic-number"
+                                id="rTraffic"
+                            >
+                                0
+                            </div>
+
+                            <div class="kpi-title">
+                                Employee Traffic
+                            </div>
+
+                        </div>
+
+
+                        <!-- Total Filings -->
+
+                        <div class="card">
+
+                            <div
+                                class="kpi-number"
+                                id="rTotal"
+                            >
+                                0
+                            </div>
+
+                            <div class="kpi-title">
+                                Total Filings
+                            </div>
+
+                        </div>
+
+
+                        <!-- Additional Filings -->
+
+                        <div class="card impact">
+
+                            <div
+                                class="kpi-number"
+                                id="rAdditional"
+                            >
+                                +0
+                            </div>
+
+                            <div class="kpi-title">
+                                Additional ITRs filed
+                            </div>
+
+                            <div class="kpi-subtitle">
+                                compared to previous year
+                            </div>
+
+                        </div>
+
+
+                    </section>
+
+                </main>
+
+
+                <!-- =================================
+                     SUMMARY
+                ================================== -->
+
+                <footer>
+
+                    <div class="summary">
+
+                        <div class="summary-title">
+                            Performance Summary
+                        </div>
+
+                        <p id="rSummary">
+
+                            Employee filings increased by
+                            <strong>0%</strong>,
+                            resulting in
+                            <strong>0 additional returns</strong>
+                            compared to last year.
+
+                        </p>
+
+                    </div>
+
+                </footer>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<!-- =========================================
+     APP JAVASCRIPT
+========================================== -->
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
